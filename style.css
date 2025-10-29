@@ -1,0 +1,1565 @@
+/* ========================= */
+/*         Reset Dasar       */
+/* ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000; /* fallback untuk menghindari celah putih */
+}
+
+
+
+
+
+/* ========================= */
+/*         Navbar Top        */
+/* ========================= */
+.navbar-top {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.logo img {
+  width: 70px;
+  height: auto;
+}
+
+.logo h3 {
+  margin: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* ========================= */
+/*        Navbar Style       */
+/* ========================= */
+#navbar-color {
+  background-color: #1c1b1b;
+}
+
+.navbar-nav {
+  margin: auto;
+}
+
+.nav-link {
+  margin-left: 30px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+.nav-link:hover {
+  color: green;
+}
+/* ========================= */
+/*      Responsive Logo      */
+/* ========================= */
+@media (max-width: 400px) {
+  .logo h3 {
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+/* ========================= */
+/*        Main Content       */
+/* ========================= */
+/* ========================= */
+/*        Hero Carousel      */
+/* ========================= */
+
+/* Pastikan carousel penuh lebar */
+#heroCarousel {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+#heroCarousel .carousel-inner {
+  height: 100%;
+}
+
+#heroCarousel .carousel-item {
+  height: 100%;
+}
+
+#heroCarousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tambahkan overlay gelap agar teks lebih kontras */
+#heroCarousel .carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* layer transparan gelap */
+  z-index: 1;
+}
+
+/* Posisi teks di carousel */
+#heroCarousel .carousel-caption {
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  max-width: 600px;
+  text-align: left;
+  z-index: 2; /* pastikan teks di atas overlay */
+}
+
+#heroCarousel .carousel-caption h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff; /* putih agar kontras */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8),
+               0 0 20px rgba(0, 0, 0, 0.6); /* bayangan tebal dan lembut */
+}
+
+#heroCarousel .carousel-caption p {
+  font-size: 1.3rem;
+  color: #f5f5f5;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8),
+               0 0 10px rgba(0, 0, 0, 0.6); /* efek serupa tapi sedikit lebih ringan */
+}
+
+/* Responsive carousel */
+@media (max-width: 768px) {
+  #heroCarousel {
+    height: 60vh; /* lebih pendek di layar kecil */
+  }
+
+  #heroCarousel .carousel-caption h1 {
+    font-size: 1.8rem;
+  }
+
+  #heroCarousel .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+/* ========================= */
+/*     Scroll Card Area      */
+/* ========================= */
+.scroll-container {
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background-color: #f8f8f8;
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch; /* Smooth scroll di iOS */
+  scroll-behavior: smooth;
+  touch-action: pan-x; /* Hanya allow horizontal scroll */
+  scroll-snap-type: none; /* Disable snap untuk smooth scroll */
+}
+
+/* Hide scrollbar tapi tetap bisa scroll */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll-container:active {
+  cursor: grabbing;
+}
+
+.scroll-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: max-content;
+  will-change: transform;
+}
+
+/* ========================= */
+/*     Services Section      */
+/* ========================= */
+.services-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background */
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(89, 178, 121, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.services-section::after {
+  content: "";
+  position: absolute;
+  bottom: -40%;
+  right: -15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(89, 178, 121, 0.04) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Container */
+.services-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.services-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.services-section h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  display: inline-block;
+}
+
+/* Title underline */
+.services-section h3::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #59b279 0%, #45a164 100%);
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(89, 178, 121, 0.4);
+}
+
+.services-subtitle {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  max-width: 800px;
+  margin: 40px auto 0;
+  line-height: 1.7;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* Service Card */
+.service-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(89, 178, 121, 0.4);
+  box-shadow: 0 20px 50px rgba(89, 178, 121, 0.15);
+}
+
+/* Image Wrapper */
+.service-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.service-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover .service-image-wrapper img {
+  transform: scale(1.1);
+}
+
+/* Overlay on Image */
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.service-card:hover .service-overlay {
+  opacity: 1;
+}
+
+/* Service Number */
+.service-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #59b279;
+  text-shadow: 0 2px 10px rgba(89, 178, 121, 0.5);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Service Content */
+.service-content {
+  padding: 30px 25px;
+  position: relative;
+}
+
+/* Service Icon */
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #59b279 0%, #45a164 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(89, 178, 121, 0.3);
+  transition: all 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(89, 178, 121, 0.5);
+}
+
+/* Service Title */
+.service-content h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-content h5 {
+  color: #59b279;
+}
+
+/* Service Description */
+.service-content p {
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Glowing effect on hover */
+.service-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, #59b279, transparent, #59b279);
+  
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.service-card:hover:before {
+  opacity: 0.5;
+}
+
+
+/* ========================= */
+/*      Responsiveness       */
+/* ========================= */
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  .services-section {
+    padding: 80px 20px;
+  }
+
+  .services-section h3 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .services-subtitle {
+    font-size: 1rem;
+  }
+
+  .services-header {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 15px;
+  }
+
+  .services-section h3 {
+    font-size: 2rem;
+  }
+
+  .services-section h3::after {
+    width: 60px;
+    height: 3px;
+  }
+
+  .services-subtitle {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-image-wrapper {
+    height: 220px;
+  }
+
+  .service-content {
+    padding: 25px 20px;
+  }
+
+  .service-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .service-content h5 {
+    font-size: 1.3rem;
+  }
+
+  .service-content p {
+    font-size: 0.9rem;
+  }
+
+  .service-number {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 50px 15px;
+  }
+
+  .services-section h3 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .services-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .services-header {
+    margin-bottom: 50px;
+  }
+
+  .service-image-wrapper {
+    height: 200px;
+  }
+
+  .service-content {
+    padding: 20px 18px;
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-content h5 {
+    font-size: 1.2rem;
+  }
+
+  .service-number {
+    font-size: 2rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+  .services-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .services-grid {
+    gap: 25px;
+  }
+
+  .service-image-wrapper {
+    height: 180px;
+  }
+}
+
+
+
+
+
+/* ========================= */
+/*   Portfolio Section       */
+/* ========================= */
+.portfolio-section {
+  padding: 100px 20px;
+  background: #1c1c1c;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background elements */
+.portfolio-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(89, 178, 121, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.portfolio-section::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(89, 178, 121, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Container */
+.portfolio-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Title */
+.portfolio-section h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Title underline decoration */
+.portfolio-section h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #59b279 0%, #1c1b1b 100%);
+  margin: 20px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(89, 178, 121, 0.3);
+}
+
+/* Subtitle */
+.portfolio-section .subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  margin-bottom: 70px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Grid Container */
+.portfolio-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* Portfolio Card */
+.portfolio-card {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Card Hover Effect */
+.portfolio-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  border-color: rgba(89, 178, 121, 0.3);
+}
+
+/* Image Wrapper */
+.portfolio-card .image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Image zoom effect on hover */
+.portfolio-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay on image */
+.portfolio-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(28, 27, 27, 0.9) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 30px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.portfolio-card:hover .overlay {
+  opacity: 1;
+}
+
+/* View More Button */
+.portfolio-card .view-more {
+  background: #59b279;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(89, 178, 121, 0.4);
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover .view-more {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(89, 178, 121, 0.6);
+}
+
+/* Portfolio Content */
+.portfolio-content {
+  padding: 30px 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.portfolio-content h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1c1b1b;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-content h4 {
+  color: #59b279;
+}
+
+.portfolio-content p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* Arrow Icon */
+.portfolio-content .card-icon {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1c1b1b;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover .card-icon {
+  background: #59b279;
+  color: #fff;
+  transform: rotate(45deg) scale(1.1);
+  box-shadow: 0 4px 15px rgba(89, 178, 121, 0.4);
+}
+
+/* ========================= */
+/*      Responsiveness       */
+/* ========================= */
+@media (max-width: 1200px) {
+  .portfolio-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  .portfolio-section {
+    padding: 80px 20px;
+  }
+
+  .portfolio-section h3 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .portfolio-section .subtitle {
+    font-size: 1rem;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 60px 15px;
+  }
+
+  .portfolio-section h3 {
+    font-size: 2rem;
+  }
+
+  .portfolio-section .subtitle {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .portfolio-cards-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .portfolio-card .image-wrapper {
+    height: 240px;
+  }
+
+  .portfolio-content {
+    padding: 25px 20px;
+  }
+
+  .portfolio-content h4 {
+    font-size: 1.4rem;
+  }
+
+  .portfolio-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-section {
+    padding: 50px 15px;
+  }
+
+  .portfolio-section h3 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .portfolio-section h3::after {
+    width: 60px;
+    height: 3px;
+  }
+
+  .portfolio-card .image-wrapper {
+    height: 220px;
+  }
+
+  .portfolio-content {
+    padding: 20px 18px;
+  }
+
+  .portfolio-content h4 {
+    font-size: 1.3rem;
+  }
+
+  .portfolio-content .card-icon {
+    width: 35px;
+    height: 35px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .portfolio-card .view-more {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+  .portfolio-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .portfolio-section .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .portfolio-cards-wrapper {
+    gap: 25px;
+  }
+}
+
+
+/* ========================= */
+/*        Steps Section      */
+/* ========================= */
+.steps-section {
+  background: #111; /* sesuai tema gelap */
+}
+
+.steps-section h3 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.steps-section h5 {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.steps-section p {
+  margin-bottom: 0;
+  color: #ddd; /* abu terang biar readable */
+}
+
+/* Step Icon */
+.step-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  color: #111;       /* icon hitam */
+  background: #fff;  /* lingkaran putih */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.step-icon i {
+  font-size: 22px;
+}
+
+/* Step Number */
+.step-number {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  background: #111; /* hitam */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* WhatsApp Link */
+.wa-link {
+  font-weight: 600;
+  color: #25d366;
+  text-decoration: none;
+}
+
+.wa-link:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+/* ========================= */
+/*   About / Why Choose Us   */
+/* ========================= */
+.about-visi-misi-section {
+  margin: 0;
+  padding: 80px 20px;
+  background: #111; /* dark theme */
+  color: #fff;
+  border-radius: 0;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Gambar kiri */
+.about-left {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-left img {
+  width: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Konten kanan */
+.about-right {
+  flex: 1 1 55%;
+}
+
+.about-right h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #59b279; /* aksen hijau */
+  margin-bottom: 20px;
+}
+
+.about-right h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #59b279;
+  margin: 40px 0 20px;
+  position: relative;
+}
+
+.about-right p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* Responsiveness About Section */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .about-left,
+  .about-right {
+    flex: 1 1 100%;
+  }
+
+  .about-left img {
+    max-height: 250px;
+  }
+
+  .about-right h2 {
+    font-size: 2rem;
+  }
+
+  .about-right h3 {
+    font-size: 1.4rem;
+  }
+
+  .about-right p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ========================= */
+/*   Kenapa Harus Memilih    */
+/* ========================= */
+.about-bottom {
+  margin-top: 50px;
+  padding: 40px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efek decorative background */
+.about-bottom::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(89, 178, 121, 0.1) 0%, transparent 70%);
+  animation: pulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.8;
+  }
+}
+
+.about-bottom h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Garis bawah judul */
+.about-bottom h3::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #59b279 0%, #45a164 100%);
+  margin: 15px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(89, 178, 121, 0.5);
+}
+
+/* List container */
+.about-bottom ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+  counter-reset: list-counter;
+}
+
+/* Card-style untuk setiap item */
+.about-bottom ul li {
+  position: relative;
+  padding: 25px 25px 25px 70px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(89, 178, 121, 0.2);
+  border-radius: 15px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #ddd;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  counter-increment: list-counter;
+}
+
+/* Angka urut dengan styling */
+.about-bottom ul li::before {
+  content: counter(list-counter);
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #59b279 0%, #45a164 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(89, 178, 121, 0.4);
+  transition: all 0.4s ease;
+}
+
+/* Animated border gradient - Simplified */
+.about-bottom ul li::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #59b279, #45a164, #59b279);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover effects */
+.about-bottom ul li:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(89, 178, 121, 0.1);
+  border-color: rgba(89, 178, 121, 0.5);
+  box-shadow: 0 15px 40px rgba(89, 178, 121, 0.3);
+  color: #fff;
+}
+
+.about-bottom ul li:hover::before {
+  transform: translateY(-50%) rotate(360deg) scale(1.1);
+  box-shadow: 0 6px 20px rgba(89, 178, 121, 0.6);
+}
+
+.about-bottom ul li:hover::after {
+  opacity: 1;
+}
+
+/* Strong text styling */
+.about-bottom ul li strong {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #59b279;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.about-bottom ul li:hover strong {
+  color: #6ed68f;
+}
+
+/* ========================= */
+/*      Responsiveness       */
+/* ========================= */
+@media (max-width: 992px) {
+  .about-bottom ul {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+
+  .about-bottom h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-bottom {
+    padding: 30px 20px;
+  }
+
+  .about-bottom h3 {
+    font-size: 1.6rem;
+    margin-bottom: 35px;
+  }
+
+  .about-bottom ul {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-bottom ul li {
+    padding: 20px 20px 20px 65px;
+    font-size: 0.95rem;
+  }
+
+  .about-bottom ul li strong {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-bottom {
+    padding: 25px 15px;
+    border-radius: 15px;
+  }
+
+  .about-bottom h3 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  .about-bottom ul li {
+    padding: 18px 18px 18px 60px;
+  }
+
+  .about-bottom ul li::before {
+    width: 35px;
+    height: 35px;
+    left: 15px;
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+/* ========================= */
+/*           Footer          */
+/* ========================= */
+#footer {
+  width: 100%;
+  margin: 0;
+  padding: 50px 20px;
+  background-color: #000;
+}
+
+#footer h1,
+#footer p {
+  color: #fff;
+  padding-top: 30px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1 1 250px;
+}
+
+/* Footer Left */
+.footer-left h2 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #59b279;
+}
+
+.footer-left p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.footer-left a {
+  color: #59b279;
+  text-decoration: none;
+}
+
+/* Footer Center */
+.footer-center h3,
+.footer-right h3 {
+  margin-bottom: 15px;
+  color: #59b279;
+}
+
+.footer-center ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-center ul li {
+  margin-bottom: 8px;
+}
+
+.footer-center ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-center ul li a:hover {
+  color: #59b279;
+}
+
+/* Footer Right (Social Icons) */
+.icons a {
+  margin-right: 15px;
+  font-size: 28px;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.icons a:hover {
+  color: #59b279;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #333;
+}
+
+/* ========================= */
+/*   Footer Responsiveness   */
+/* ========================= */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1 1 100%;
+  }
+
+  .footer-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .footer-left p,
+  .footer-center ul li a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #footer {
+    padding: 30px 15px;
+  }
+
+  .footer-left h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer-left p,
+  .footer-center ul li a,
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+
+  .icons a {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+
+
+
+
+/* ====== Container utama Logo WA ====== */
+.whatsapp-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ====== Balon teks ====== */
+.whatsapp-label {
+  background: #ffffff;
+  color: #333333;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-size: 14px;
+  line-height: 1.3;
+  white-space: nowrap;
+  opacity: 1; /* selalu tampil */
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-label p {
+  margin: 0;
+}
+
+.whatsapp-label strong {
+  font-weight: 600;
+  color: #000;
+}
+
+/* ====== Tombol WhatsApp ====== */
+.whatsapp-float {
+  width: 60px;
+  height: 60px;
+  background-color: #1C1B1B; /* biru profesional */
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* ====== RESPONSIVE MODE ====== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .whatsapp-container {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .whatsapp-label {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* HP */
+@media (max-width: 600px) {
+  .whatsapp-container {
+    right: 15px;
+    bottom: 15px;
+    gap: 8px;
+  }
+
+  .whatsapp-label {
+    display: none;
+  }
+
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    font-size: 26px;
+  }
+}
+
+/* Layar sangat kecil (<400px): teks di atas tombol */
+@media (max-width: 400px) {
+  .whatsapp-container {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .whatsapp-label {
+    margin-bottom: 6px;
+    text-align: right;
+  }
+}

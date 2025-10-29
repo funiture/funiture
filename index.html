@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FUNITURE</title>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous" />
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md" id="navbar-color">
+    <div class="container d-flex align-items-center justify-content-between w-100">
+      <!-- Logo & Judul -->
+      <div class="logo d-flex align-items-center">
+        <img src="./image/Logo_Funiture_Fix.png" alt="Logo" />
+        <h3>FUNITURE</h3>
+      </div>
+
+      <!-- Toggler Button (untuk mobile) -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span>
+          <i><img src="./image/menu.png" alt="Menu" width="30px" /></i>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+    <li class="nav-item"><a class="nav-link" href="#portfolio">Portofolio</a></li> <!-- Ganti dari #gallery -->
+    <li class="nav-item">
+      <a class="nav-link whatsapp-link" 
+         href="https://wa.me/6285695644818?text=Halo%20saya%20tertarik%20dengan%20layanan%20Fu(r)niture" 
+         target="_blank">
+        Contact
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+    </div>
+  </nav>
+
+  <!-- Hero Carousel -->
+<div id="heroCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+  
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#heroCarousel" data-slide-to="1"></li>
+    <li data-target="#heroCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Carousel Inner -->
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="./image/Baner 1.png" alt="Slide 1">
+      <div class="carousel-caption text-left">
+        <h1>Wujudkan Furniture Impian Mulai di Bawah 2 juta!!!.</h1>
+        <p>Desain sesuai kebutuhan, gratis konsultasi, proses cepat & hasil rapi.</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./image/Baner 2.png" alt="Slide 2">
+      <div class="carousel-caption text-left">
+        <h1>Interior Cantik, Hidup Jadi Lebih Nyaman.</h1>
+        <p>Cek portofolio kita sekarang.</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./image/Baner 3.png" alt="Slide 3">
+      <div class="carousel-caption text-left">
+        <h1>Bingung Mau Mulai Dari Mana?</h1>
+        <p>Tenang, tim desain kami Funiture siap bantu kamu menemukan solusi terbaik untuk rumah baru. 
+          Segera hubungi kami di WhatsApp.
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <!-- End of Carousel Inner -->
+
+  <!-- Controls -->
+  <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+
+  <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+</div>
+<!-- End of Hero Carousel -->
+
+
+
+  <!-- Services Section -->
+<section class="services-section" id="services">
+  <div class="services-container">
+    <div class="services-header">
+      <h3>SERVICES WE OFFER</h3>
+      <p class="services-subtitle">Solusi lengkap untuk kebutuhan furniture, interior, dan konstruksi Anda dengan kualitas terbaik dan desain modern</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Card 1: Furniture -->
+      <div class="service-card">
+        <div class="service-image-wrapper">
+          <img src="./image/slide3.png" alt="Furniture Custom" />
+          <div class="service-overlay">
+            <span class="service-number">01</span>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h5>Furniture</h5>
+          <p>We provide custom furniture manufacturing services with modern and functional designs, ranging from kitchen sets, wardrobes, tables, to storage shelves.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Design Custom Furniture -->
+      <div class="service-card">
+        <div class="service-image-wrapper">
+          <img src="./image/slide2.png" alt="Design Custom Furniture" />
+          <div class="service-overlay">
+            <span class="service-number">02</span>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h5>Design Custom Furniture</h5>
+          <p>We provide custom furniture design services tailored to your needs and room style.</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Interior Design -->
+      <div class="service-card">
+        <div class="service-image-wrapper">
+          <img src="./image/interiordesign.png" alt="Interior Design" />
+          <div class="service-overlay">
+            <span class="service-number">03</span>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 3H21V21H3V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h5>Design Interior</h5>
+          <p>We provide interior design services tailored to your lifestyle and needs.</p>
+        </div>
+      </div>
+
+      <!-- Card 4: House Construction -->
+      <div class="service-card">
+        <div class="service-image-wrapper">
+          <img src="./image/pembangunan.png" alt="House Construction" />
+          <div class="service-overlay">
+            <span class="service-number">04</span>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 9L12 2L21 9V20C21 21.1 20.1 22 19 22H5C3.9 22 3 21.1 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h5>House Construction</h5>
+          <p>We provide home construction services from foundation to completion with the highest quality.</p>
+        </div>
+      </div>
+
+      <!-- Card 5: Building Design -->
+      <div class="service-card">
+        <div class="service-image-wrapper">
+          <img src="./image/desainpembangunan.png" alt="Building Design" />
+          <div class="service-overlay">
+            <span class="service-number">05</span>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h5>Building Design</h5>
+          <p>Our building design services help bring your dream building to life with a modern and measured approach.</p>
+        </div>
+      </div>
+
+      <!-- Card 6: Development -->
+      <div class="service-card">
+        <div class="service-image-wrapper">
+          <img src="./image/development.png" alt="Development" />
+          <div class="service-overlay">
+            <span class="service-number">06</span>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 16V8C20.9996 7.64928 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64928 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h5>Development</h5>
+          <p>We provide comprehensive housing development services, from planning and construction to finishing, ensuring a comfortable and modern living environment.</p>
+        </div>
+      </div>
+
+      <!-- Card 7: Renovation -->
+      <div class="service-card">
+        <div class="service-image-wrapper">
+          <img src="./image/renovation.png" alt="Renovation" />
+          <div class="service-overlay">
+            <span class="service-number">07</span>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.7 6.3C15.1 5.9 15.1 5.3 14.7 4.9L19.1 0.5C19.5 0.1 20.1 0.1 20.5 0.5L23.5 3.5C23.9 3.9 23.9 4.5 23.5 4.9L19.1 9.3C18.7 8.9 18.1 8.9 17.7 9.3L14.7 6.3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 10L4 16V20H8L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h5>Renovation</h5>
+          <p>We offer professional renovation services to refresh, upgrade, and transform your home or space while maintaining its original character.</p>
+        </div>
+      </div>
+
+      <!-- Card 8: Supervision -->
+      <div class="service-card">
+        <div class="service-image-wrapper">
+          <img src="./image/supervision.png" alt="Supervision" />
+          <div class="service-overlay">
+            <span class="service-number">08</span>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h5>Supervision</h5>
+          <p>We provide professional project supervision to ensure construction quality, timeline compliance, and smooth coordination from start to finish.</p>
+        </div>
+      </div>
+
+      <!-- Card 9: Consultation -->
+      <div class="service-card">
+        <div class="service-image-wrapper">
+          <img src="./image/Consultation.png" alt="Consultation" />
+          <div class="service-overlay">
+            <span class="service-number">09</span>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h5>Consultation</h5>
+          <p>We offer professional consultation to help you plan your interior and furniture projects, providing expert advice tailored to your needs and budget.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Portofolio Section -->
+<section class="portfolio-section" id="portfolio">
+  <div class="portfolio-container">
+    <h3>PORTOFOLIO</h3>
+    <p class="subtitle">Koleksi karya furniture custom kami yang dirancang dengan detail, fungsional, dan estetika modern untuk setiap ruangan Anda</p>
+    
+    <div class="portfolio-cards-wrapper">
+      <!-- Card 1: Wardrobe -->
+      <a href="wardrobe.html" class="portfolio-card">
+        <div class="image-wrapper">
+          <img src="./image/Lemari Custom.png" alt="Wardrobe Custom Design">
+          <div class="overlay">
+            <span class="view-more">Lihat Detail</span>
+          </div>
+        </div>
+        <div class="portfolio-content">
+          <h4>Wardrobe</h4>
+          <p>Wujudkan lemari impian yang fungsional dan elegan</p>
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 2: Kitchen Set -->
+      <a href="kitchen.html" class="portfolio-card">
+        <div class="image-wrapper">
+          <img src="./image/kitchen.png" alt="Kitchen Set Modern">
+          <div class="overlay">
+            <span class="view-more">Lihat Detail</span>
+          </div>
+        </div>
+        <div class="portfolio-content">
+          <h4>Kitchen Set</h4>
+          <p>Wujudkan dapur impian yang estetika dan efisien</p>
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 3: Backdrop TV -->
+      <a href="backdroptv.html" class="portfolio-card">
+        <div class="image-wrapper">
+          <img src="./image/backdroptv.png" alt="Backdrop TV Minimalis">
+          <div class="overlay">
+            <span class="view-more">Lihat Detail</span>
+          </div>
+        </div>
+        <div class="portfolio-content">
+          <h4>Backdrop TV</h4>
+          <p>Hadirkan tampilan ruang tamu modern dan menawan</p>
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 4: Other Projects -->
+      <a href="our-other-projects.html" class="portfolio-card">
+        <div class="image-wrapper">
+          <img src="./image/oop.jpg" alt="Our Other Projects">
+          <div class="overlay">
+            <span class="view-more">Lihat Detail</span>
+          </div>
+        </div>
+        <div class="portfolio-content">
+          <h4>Our Other Projects</h4>
+          <p>Lihat berbagai proyek interior lain yang kami rancang dengan perpaduan estetika, kenyamanan, dan fungsionalitas.</p>
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Steps Section -->
+<section class="steps-section py-5">
+  <div class="container">
+    <h3 class="text-center text-white mb-5">
+      Langkah Mudah Gunakan Jasa Funiture
+    </h3>
+    <div class="row">
+
+      <!-- Step 1: Konsultasi -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex">
+          <div class="step-icon">
+            <span class="step-number">1</span>
+            <i class='bx bx-conversation'></i>
+          </div>
+          <div class="ml-3 text-white">
+            <h5>Konsultasi</h5>
+            <p>
+              Konsultasikan kebutuhanmu ke tim kami melalui WhatsApp, e-mail, 
+              atau meeting/konsultasi secara langsung sesuai janji temu.
+            </p>
+            <p class="mt-2">
+              <i class='bx bxl-whatsapp'></i>
+              <a href="https://wa.me/6285695644818" target="_blank" class="wa-link">
+                +6285695644818
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Survei -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex">
+          <div class="step-icon">
+            <span class="step-number">2</span>
+            <i class='bx bx-search'></i>
+          </div>
+          <div class="ml-3 text-white">
+            <h5>Survei</h5>
+            <p>
+              Tim kami melakukan survei lokasi untuk memastikan detail kebutuhan proyekmu.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Invoicing -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex">
+          <div class="step-icon">
+            <span class="step-number">3</span>
+            <i class='bx bx-receipt'></i>
+          </div>
+          <div class="ml-3 text-white">
+            <h5>Invoicing</h5>
+            <p>
+              Kami menerbitkan invoice & faktur pajak sesuai kesepakatan proyek.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Pengiriman & Instalasi -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex">
+          <div class="step-icon">
+            <span class="step-number">4</span>
+            <i class='bx bxs-truck'></i>
+          </div>
+          <div class="ml-3 text-white">
+            <h5>Pengiriman & Instalasi</h5>
+            <p>
+              Produk siap dikirim & dirakit. Tunggu dengan nyaman sampai tiba di rumahmu.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- About Section -->
+<section class="about-visi-misi-section" id="about">
+  <div class="about-container">
+    <!-- Gambar -->
+    <div class="about-left">
+      <div class="about-image-wrapper">
+        <img src="./image/Logo_Funiture_Fix.png" alt="Logo Furniture">
+        <div class="decor-shape"></div>
+      </div>
+    </div>
+
+    <!-- Deskripsi -->
+    <div class="about-right">
+      <h2>About Us</h2>
+      <p>
+        Funiture adalah usaha kreatif yang bergerak di dua lini: konstruksi dan desain
+        furniture custom. Kami hadir dengan pendekatan yang fleksibel, kreatif, dan solutif, karena
+        kami percaya setiap ruang dan furniture punya cerita unik yang layak diwujudkan dengan
+        presisi dan karakter kuat.
+      </p>
+      <p>
+        Dengan tim profesional dan komitmen tinggi terhadap kualitas, Funiture selalu berusaha
+        menghadirkan karya yang fungsional sekaligus estetis. Tidak hanya membuat furniture,
+        kami menciptakan solusi yang menyatu dengan kebutuhan, gaya hidup, dan identitas setiap
+        klien.
+      </p>
+    </div>
+  </div>
+
+  <!-- Kenapa Memilih Funiture -->
+  <div class="about-bottom">
+    <h3>Kenapa Harus Memilih Funiture?</h3>
+    <ul>
+      <li><strong>Desain Eksklusif & Modern</strong> — Setiap produk dirancang dengan estetika kekinian, cocok untuk hunian maupun ruang kerja.</li>
+      <li><strong>Material Berkualitas Premium</strong> — Hanya menggunakan bahan pilihan yang tahan lama, aman, dan ramah lingkungan.</li>
+      <li><strong>Harga Transparan & Kompetitif</strong> — Tanpa biaya tersembunyi, kualitas terbaik dengan harga yang sesuai.</li>
+      <li><strong>Layanan Konsultasi Gratis dan Survei Gratis</strong> — Tim kami siap bantu memilih desain, ukuran, dan material sesuai kebutuhanmu.</li>
+      <li><strong>Pengiriman & Instalasi Cepat</strong> — Produk tidak hanya dikirim dengan aman, tapi juga langsung dirakit oleh tim profesional.</li>
+      <li><strong>Garansi & Layanan Purna Jual</strong> — Jaminan kualitas serta after-sales service yang selalu siap membantu.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Floating WhatsApp Button -->
+<div class="whatsapp-container">
+  <div class="whatsapp-label">
+    <p>Need Help?<br><strong>Consultation with us</strong></p>
+  </div>
+
+  <a href="https://wa.me/6285695644818?text=Halo%20saya%20ingin%20konsultasi%20terkait%20layanan%20furniture" 
+     class="whatsapp-float" 
+     target="_blank" 
+     aria-label="WhatsApp">
+    <i class='bx bxl-whatsapp'></i>
+  </a>
+</div>
+
+
+ <!-- Footer -->
+<footer id="footer">
+  <div class="footer-container">
+    
+    <!-- Kolom Kiri: Info Perusahaan -->
+    <div class="footer-left">
+      <h2>FUNITURE</h2>
+      <p>Your Future Furniture</p>
+      <p>
+        <strong>Alamat:</strong><br>
+        Perkantoran Astoria<br>
+        Jl. Letjen TB Simatupang, Rambutan, Kec. Ciracas, Jakarta Timur
+      </p>
+      <p>
+        <strong>Telepon/WA:</strong>
+        <a href="https://wa.me/6285695644818" target="_blank">+62 856 9564 4818</a>
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:funiture.fun@gmail.com">funiture.fun@gmail.com</a>
+      </p>
+      <p>
+        <strong>Jam Operasional:</strong><br>
+        Senin – Sabtu, 08:00 – 17:00
+      </p>
+    </div>
+
+    <!-- Kolom Tengah: Quick Links -->
+<div class="footer-center">
+  <h3>Quick Links</h3>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About Us</a></li> <!-- ID disamakan dengan section about -->
+    <li><a href="#portfolio">Portofolio</a></li> <!-- ID disamakan dengan section portfolio -->
+    <li><a href="#services">Services</a></li> <!-- Bisa aktif kalau nanti ada section id="services" -->
+    <li><a href="https://wa.me/6285695644818" target="_blank">Contact</a></li>
+  </ul>
+</div>
+
+
+    <!-- Kolom Kanan: Sosmed -->
+    <div class="footer-right">
+      <h3>Follow Us</h3>
+      <div class="icons">
+        <a href="https://www.instagram.com/funiture.interior" target="_blank" aria-label="Instagram">
+          <i class='bx bxl-instagram'></i>
+        </a>
+        <a href="https://wa.me/6285695644818" target="_blank" aria-label="WhatsApp">
+          <i class='bx bxl-whatsapp'></i>
+        </a>
+        <a href="https://www.tiktok.com/@rebwildxfuniture" target="_blank" aria-label="TikTok">
+          <i class='bx bxl-tiktok'></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom text-center">
+    <p>&copy; 2025 <strong>FUNITURE</strong>. All Rights Reserved</p>
+    <p>Designed by <a href="#">Funiture Team</a></p>
+  </div>
+</footer>
+
+
+
+  <!-- Custom JS -->
+  <script src="Script.JS" defer></script>
+
+</body>
+</html>
