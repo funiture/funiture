@@ -1566,8 +1566,8 @@ body {
 /* ========================= */
 .scroll-to-top {
   position: fixed;
-  bottom: 25px;
-  left: 25px;
+  bottom: 100px; /* naik sedikit dari bawah biar gak nabrak tombol WA */
+  right: 25px;   /* geser sedikit ke kiri */
   width: 50px;
   height: 50px;
   background: linear-gradient(135deg, #59b279 0%, #45a164 100%);
@@ -1618,8 +1618,8 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .scroll-to-top {
-    bottom: 20px;
-    left: 20px;
+    bottom: 90px; /* tetap naik sedikit di tablet */
+    right: 20px;
     width: 48px;
     height: 48px;
     font-size: 22px;
@@ -1628,8 +1628,8 @@ body {
 
 @media (max-width: 600px) {
   .scroll-to-top {
-    bottom: 15px;
-    left: 15px;
+    bottom: 85px;
+    right: 18px;
     width: 45px;
     height: 45px;
     font-size: 20px;
@@ -1638,8 +1638,8 @@ body {
 
 @media (max-width: 400px) {
   .scroll-to-top {
-    bottom: 15px;
-    left: 15px;
+    bottom: 80px; /* sedikit lebih dekat di HP kecil */
+    right: 15px;
     width: 42px;
     height: 42px;
     font-size: 18px;
