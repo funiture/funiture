@@ -1457,9 +1457,6 @@ body {
 }
 
 
-
-
-
 /* ====== Container utama Logo WA ====== */
 .whatsapp-container {
   position: fixed;
@@ -1561,5 +1558,90 @@ body {
   .whatsapp-label {
     margin-bottom: 6px;
     text-align: right;
+  }
+}
+
+/* ========================= */
+/*   Scroll to Top Button    */
+/* ========================= */
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #59b279 0%, #45a164 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9998;
+  box-shadow: 0 4px 15px rgba(89, 178, 121, 0.4);
+}
+
+/* Show button */
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover effect */
+.scroll-to-top:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(89, 178, 121, 0.6);
+  background: linear-gradient(135deg, #6ed68f 0%, #59b279 100%);
+}
+
+/* Active/Click effect */
+.scroll-to-top:active {
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Icon styling */
+.scroll-to-top i {
+  transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover i {
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 20px;
+    left: 20px;
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .scroll-to-top {
+    bottom: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .scroll-to-top {
+    bottom: 15px;
+    left: 15px;
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
   }
 }

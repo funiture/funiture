@@ -1,3 +1,6 @@
+// ========================================
+// EXISTING CODE - Services Scroll (tetap ada)
+// ========================================
 document.addEventListener("DOMContentLoaded", () => {
   const cardContainer = document.getElementById("cardContainer");
   const scrollContainer = document.querySelector(".scroll-container");
@@ -202,4 +205,35 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("beforeunload", () => {
     clearInterval(scrollCheckInterval);
   });
+});
+
+// ========================================
+// NEW CODE - SCROLL TO TOP BUTTON
+// ========================================
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  if (!scrollTopBtn) {
+    console.warn("Scroll to top button tidak ditemukan");
+    return;
+  }
+
+  // Show/Hide button berdasarkan scroll position
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+      scrollTopBtn.classList.add("show");
+    } else {
+      scrollTopBtn.classList.remove("show");
+    }
+  });
+
+  // Smooth scroll to top ketika button diklik
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+  console.log("✅ Scroll to top button initialized");
 });
